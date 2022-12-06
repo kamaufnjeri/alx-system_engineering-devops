@@ -1,2 +1,2 @@
 #!/bin/bash
-PRINTENV1
+printenv
