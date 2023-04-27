@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#check if file exists, regular and empty
+k=school
+if [ -e $k ]
+then
+	echo "$k file exists"
+	if [ -s $k ]
+	then
+		echo "$k file is not empty"
+	else
+		echo "$k file is empty"
+	fi
+	if [ -f $k ]
+	then
+		echo "$k is a regular file"
+	fi
+else
+	echo "$k school file does not exists"
+fi
