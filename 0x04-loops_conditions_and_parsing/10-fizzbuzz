@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#fizzbuzz file
+#if number is a multiple of both 5 and 3 print fizzbuzz
+#if a multible of five print buzz
+#print fizz for multiples of three
+#else print the numbers
+for (( i = 1; i <= 100; i++ ))
+do
+	if (( i % 5 == 0 && i % 3 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( i % 5 == 0 ))
+	then
+		echo "Buzz"
+	elif (( i % 3 == 0 ))
+	then
+		echo "Fizz"
+	else
+		echo "$i"
+	fi
+done
