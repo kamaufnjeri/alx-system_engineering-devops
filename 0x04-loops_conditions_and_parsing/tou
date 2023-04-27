@@ -1,0 +1,200 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDqJRH1q5rPUKqqcQGY+35Sk7g4dGEYinpeD2+t9qJLXcPHixm2/HYejkYCeisUpMX2HxRhDp5oAFtahiKtSCkPT6jesrT8EDpbJTOBDq6hrf1RKWmh7+HBpILYsZH46deqRB18HTkyRO3fGKkNpT7wFU0KueC5uAXIXUJWu2LnwxjVbxVKTbjLHPWoUYDGtyqYgDfwziWlxAA3KItcVh2hl0u8hQj+d1FrydL1vkq/y/936djwvPrEbqUN/Qrs/nPRrhIjgCMJFsypv0Nz/BwRcJQ/V8LMkBBie4ueBXz5HMOMwsE2JdL1kHg6/HFVupdu2gTConHQgo2GUJB4F1xlZmW5by9/1axS47CXXGhTNU+xWHuZYB1IuK6uyGDtVtqJuhdnOKsTGZwjnP85zcOaKuH+X13K6QXUNEnKzj0jeyyYOmZ/X70vhd2ku/+VUppRXFfk1i1Me6kRwpTr1ZzHl5BNOr+makFhGl7FkhgrfUFDjABXrKvaQTKbAfYLUVc= vagrant@ubuntu-focal
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+for (( i=0; i < 10; i++ ))
+do
+	echo "Best School"
+done;
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=9
+while (( "$k" >= 0 ))
+do
+	echo "Best School"
+	((k--))
+done
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=10
+until (( "$k" == 0 ))
+do
+        echo "Best School"
+        ((k--))
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 10 ))
+do
+        echo "Best School"
+        ((k++))
+	if (( "$k" == 10 ))
+	then
+		echo "Hi"
+	fi
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 10 ))
+do
+        if (( "$k" == 4 ))
+        then
+                echo "bad luck"
+	elif (( "$k" == 8 ))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((k++))
+done
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 20 ))
+do
+	case $k in
+	4)
+		echo "$k"
+		echo "bad luck from China"
+		;;
+
+	9)
+		echo "$k"
+		echo "bad luck from Japan"
+		;;
+
+	17)
+		echo "$k"
+		echo "bad luck from Italy"
+		;;
+
+	*)
+		echo "$k"
+		;;
+	esac
+        ((k++))
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=0
+while (( "$k" <= 12 ))
+do
+        echo "Hour: $k"
+	m=1
+	while (( "$m" <= 59 ))
+	do
+		echo "$m"
+		((m++))
+	done
+	((k++))
+done
+
+#!/usr/bin/env bash
+#display lists of folders in current directory
+cat "ls 
+Loops conditions and parsing
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDqJRH1q5rPUKqqcQGY+35Sk7g4dGEYinpeD2+t9qJLXcPHixm2/HYejkYCeisUpMX2HxRhDp5oAFtahiKtSCkPT6jesrT8EDpbJTOBDq6hrf1RKWmh7+HBpILYsZH46deqRB18HTkyRO3fGKkNpT7wFU0KueC5uAXIXUJWu2LnwxjVbxVKTbjLHPWoUYDGtyqYgDfwziWlxAA3KItcVh2hl0u8hQj+d1FrydL1vkq/y/936djwvPrEbqUN/Qrs/nPRrhIjgCMJFsypv0Nz/BwRcJQ/V8LMkBBie4ueBXz5HMOMwsE2JdL1kHg6/HFVupdu2gTConHQgo2GUJB4F1xlZmW5by9/1axS47CXXGhTNU+xWHuZYB1IuK6uyGDtVtqJuhdnOKsTGZwjnP85zcOaKuH+X13K6QXUNEnKzj0jeyyYOmZ/X70vhd2ku/+VUppRXFfk1i1Me6kRwpTr1ZzHl5BNOr+makFhGl7FkhgrfUFDjABXrKvaQTKbAfYLUVc= vagrant@ubuntu-focal
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+for (( i=0; i < 10; i++ ))
+do
+	echo "Best School"
+done;
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=9
+while (( "$k" >= 0 ))
+do
+	echo "Best School"
+	((k--))
+done
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=10
+until (( "$k" == 0 ))
+do
+        echo "Best School"
+        ((k--))
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 10 ))
+do
+        echo "Best School"
+        ((k++))
+	if (( "$k" == 10 ))
+	then
+		echo "Hi"
+	fi
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 10 ))
+do
+        if (( "$k" == 4 ))
+        then
+                echo "bad luck"
+	elif (( "$k" == 8 ))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((k++))
+done
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=1
+while (( "$k" <= 20 ))
+do
+	case $k in
+	4)
+		echo "$k"
+		echo "bad luck from China"
+		;;
+
+	9)
+		echo "$k"
+		echo "bad luck from Japan"
+		;;
+
+	17)
+		echo "$k"
+		echo "bad luck from Italy"
+		;;
+
+	*)
+		echo "$k"
+		;;
+	esac
+        ((k++))
+done
+
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+k=0
+while (( "$k" <= 12 ))
+do
+        echo "Hour: $k"
+	m=1
+	while (( "$m" <= 59 ))
+	do
+		echo "$m"
+		((m++))
+	done
+	((k++))
+done
+
+#!/usr/bin/env bash
+#display lists of folders in current directory
+cat "ls 
+Loops conditions and parsing
