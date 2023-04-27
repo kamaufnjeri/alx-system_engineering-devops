@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#understanding /etc/passwd
+
+k=/etc/passwd
+while IFS=: read -r k1 k2 k3 k4 k5 k6 k7
+do
+	echo "The user $k1 is part of the $k4 gang, lives in $k6 and rides $k7. $k3 place is protected by the passcode $k2, more info about the user here: $k5"
+done < "$k"
