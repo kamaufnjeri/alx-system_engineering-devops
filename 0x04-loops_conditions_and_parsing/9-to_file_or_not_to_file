@@ -15,5 +15,5 @@ then
 		echo "$k is a regular file"
 	fi
 else
-	echo "$k school file does not exists"
+	echo "$k file does not exists"
 fi
