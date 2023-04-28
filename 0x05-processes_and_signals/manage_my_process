@@ -1,25 +1,7 @@
 #!/usr/bin/env bash
-#manage_my_process
-new_file=/var/run/my_process.pid
-case "$1" in
-	start)
-		./manage_my_process &
-		echo "$!" > "$new_file"
-		echo "manage_my_process started"
-		;;
-	stop)
-		sudo kill "$(cat "$new_file")"
-		rm "$new_file"
-		echo "manage_my_process stopped"
-		;;
-	restart)
-		sudo kill "$(cat "$new_file")"
-                rm "$new_file"
-		./manage_my_process &
-                echo "$!" > "$new_file"
-		echo "manage_my_process restarted"
-		;;
-	*)
-		echo "Usage: manage_my_process {start|stop|restart}"
-esac
-exit 0
+#manage_my_proccess
+while :
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
