@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #create a file and contains its own pid
-sudo touch /var/run/myscript.pid
-sudo echo "$$" > /var/run/myscript.pid
+touch /var/run/myscript.pid
+echo "$$" > /var/run/myscript.pid
 trap hate SIGTERM
 trap love SIGINT
 trap del SIGQUIT
@@ -9,7 +9,7 @@ trap del SIGQUIT
 hate()
 {
 	echo "I hate the kill command"
-	sudo rm /var/run/myscript.pid
+	rm /var/run/myscript.pid
 	exit
 }
 love()
@@ -18,7 +18,7 @@ love()
 }
 del()
 {
-	sudo rm /var/run/myscript.pid
+	rm /var/run/myscript.pid
 	exit
 }
 while :
