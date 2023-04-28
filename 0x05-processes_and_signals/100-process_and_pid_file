@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#create a file and contains its own pid
+sudo touch /var/run/myscript.pid
+sudo echo "$$" > /var/run/myscript.pid
+trap hate SIGTERM
+trap love SIGINT
+trap del SIGQUIT
+
+hate()
+{
+	echo "I hate the kill command"
+	sudo rm /var/run/myscript.pid
+	exit
+}
+love()
+{
+	echo "Y U no love me?!"
+}
+del()
+{
+	sudo rm /var/run/myscript.pid
+	exit
+}
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
