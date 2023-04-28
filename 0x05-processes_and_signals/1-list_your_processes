@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#scrip that show all currently running proccessses
+ps -e u --forest
