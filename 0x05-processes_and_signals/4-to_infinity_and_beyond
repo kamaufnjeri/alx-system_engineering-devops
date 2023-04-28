@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#loop displays indefinetly and a dd sleep 2
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
