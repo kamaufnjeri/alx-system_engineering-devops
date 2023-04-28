@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 #using trap
-trap echo "I am invincible!!!" SIGTERM
+trap func SIGTERM
 
+func()
+{
+	echo "I am invincible!!!"
+}
 while :
 do
     echo "To infinity and beyond"
