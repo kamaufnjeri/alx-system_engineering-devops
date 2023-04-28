@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script that show bash pid
+# shellcheck disabled=sc2009
+ps -e u --forest | grep bash
