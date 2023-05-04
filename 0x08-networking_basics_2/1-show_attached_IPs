@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#show ip addressess
+ifconfig | grep "inet " | cut -d " " -f 10 | cut -d ":" -f 6-
