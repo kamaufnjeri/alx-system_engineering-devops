@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Creating a new private and public key pairs of bits 4096 file named school and passphrase betty
+ssh-keygen -b 4096 -f school -N betty
