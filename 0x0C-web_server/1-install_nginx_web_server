@@ -13,5 +13,4 @@ echo "Hello World!" | sudo tee /var/www/html/index-debian.html
 sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
 
 # Restart nginx
-sudo systemctl restart nginx
-
+sudo service nginx start
