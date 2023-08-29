@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #webstack
-service apache2 start
+sudo service apache2 start
 sudo sed -i "/Listen 80/a NameVirtualHost \*\:80" /etc/apache2/ports.conf
