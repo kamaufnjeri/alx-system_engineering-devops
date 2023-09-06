@@ -1,32 +1,10 @@
 #!/usr/bin/env bash
-# Installs Nginx and make configurations configurations:
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install -y nginx
-
-mkdir -p /var/www/html
-touch /var/www/html/index.html
-echo "Hello World!" > /var/www/html/index.html
-touch /var/www/html/custom404.html
-echo "Ceci n'est pas une page" > /var/www/html/custom404.html
-
-server="server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    add_header X-Served-By $HOSTNAME;
-    root   /var/www/html;
-    index  index.html index.htm;
-
-    location /redirect_me {
-        return 301 http://youtube.com/;
-    }
-
-    error_page 404 /custom404.html;
-    location /404 {
-      root /var/www/html;
-      internal;
-    }
-}"
-sudo echo > /etc/nginx/sites-available/default
-
+# set up server 2
+sudo -i
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo mkdir -p /var/www/html
+sudo echo "Holberton School" >> "/var/www/html/index.html"
+sudo sed -i "25i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+sudo service nginx reload
 sudo service nginx restart
