@@ -56,4 +56,3 @@ backend backendnodes
     balance roundrobin
     server 190348-web-02 54.242.159.226:80 check
     server 190348-web-01 3.84.222.31:80 check
-
