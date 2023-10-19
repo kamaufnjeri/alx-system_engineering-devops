@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Gracefully reloads Gunicorn.
-for service in $(systemctl list-units --type service --all | awk '{if ($3 == "active") print $1}'); do systemctl reload $service; done
+sudo systemctl daemon-reload
+sudo systemctl list-units --type=service --all | awk -F' ' '/gunicorn/ {system("sudo systemctl restart " $1)}'
