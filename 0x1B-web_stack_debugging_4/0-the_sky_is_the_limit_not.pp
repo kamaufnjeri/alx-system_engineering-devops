@@ -1,4 +1,4 @@
-# Increases amount of traffic nginx can handle
+# Increases the amount of traffic nginx can handle.
 
 # fix nginx
 exec { 'fix--for-nginx':
@@ -6,7 +6,7 @@ exec { 'fix--for-nginx':
   path    => '/usr/local/bin/:/bin/'
 } ->
 
-# Restart Nginx
+# restart nginx
 exec { 'nginx-restart':
   command => 'nginx restart',
   path    => '/etc/init.d/'
