@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
-# Gracefully reloads Gunicorn without service interruption
-systemctl status gunicorn | grep -oE 'Main PID: [0-9]+' | cut -d ' ' -f3 | xargs kill -HUP
+
+# Find the Gunicorn process IDs
+gunicorn_pids=$(pgrep gunicorn)
+
+# Send the HUP signal to trigger a graceful reload
+for pid in $gunicorn_pids; do
+  kill -HUP "$pid"
+done
