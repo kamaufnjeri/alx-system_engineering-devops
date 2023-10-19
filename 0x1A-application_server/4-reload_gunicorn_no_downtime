@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+# Gracefully reloads Gunicorn without service interruption
 
-# Gracefully reloads Gunicorn.
-ps aux | grep gunicorn | awk '{ print $2 }' | xargs -I {} kill -HUP {}
+# Find the Gunicorn master process ID
+master_pid=$(pgrep gunicorn)
+
+# Check if the master process ID exists
+if [ -z "$master_pid" ]; then
+          echo "Gunicorn is not running."
+            exit 1
+fi
+
+# Send a HUP signal to the Gunicorn master process
+kill -HUP "$master_pid"
+
+echo "Gunicorn gracefully reloaded."
